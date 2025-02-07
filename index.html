@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Compressor</h1>
+        <p>Upload an image to compress it:</p>
+        <input type="file" id="upload" accept="image/*">
+        
+        <!-- Manual Size Control -->
+        <div class="size-controls">
+            <label for="width">Width (px):</label>
+            <input type="number" id="width" placeholder="Enter width">
+            
+            <label for="height">Height (px):</label>
+            <input type="number" id="height" placeholder="Enter height">
+            
+            <label for="max-size">Max Size (KB):</label>
+            <input type="number" id="max-size" placeholder="Enter max size">
+        </div>
+
+        <div class="image-container">
+            <div class="image-box">
+                <h3>Original Image</h3>
+                <img id="original-image" src="#" alt="Original Image">
+                <p id="original-size"></p>
+            </div>
+            <div class="image-box">
+                <h3>Compressed Image</h3>
+                <img id="compressed-image" src="#" alt="Compressed Image">
+                <p id="compressed-size"></p>
+            </div>
+        </div>
+
+        <button id="compress-btn">Compress Image</button>
+        <div class="output">
+            <a id="download-link" download="compressed-image.jpg">Download Compressed Image</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/browser-image-compression/dist/browser-image-compression.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
